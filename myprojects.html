@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add specific styles for projects page */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-image: url('pics/wallpaper.jpg')
+        }
+
+        .header-container {
+            background: linear-gradient(to right, lightblue, darkblue);
+            color: white;
+            padding: 10px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-left: 5%;
+            box-sizing: border-box;
+        }
+
+        .nav a {
+            flex: 1 0 33.5%;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 0px 10px;
+            transition: background 0.3s, color 0.3s;
+            box-sizing: border-box;
+        }
+
+        .nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffeb3b;
+            border-radius: 5px;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .section img {
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .section .text {
+            flex: 1;
+            max-width: 50%;
+            color: black;
+        }
+
+        .section h1 {
+            font-size: 2.5em;
+            color: darkblue;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            text-align: justify;
+        }
+
+        .contact {
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            flex: 1;
+            margin: 0 10px;
+            color: darkblue;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .contact a:hover {
+            color: lightblue;
+        }
+    </style>
+    <script src="myprojectscripts.js" defer></script> <!-- Include the external JavaScript file -->
+</head>
+<body>
+    <div class="bg">
+        <div class="header-container">
+            <div class="nav">
+                <a href="index.html">ABOUT ME</a>
+                <a href="myprojects.html">MY PROJECTS</a>
+                <a href="others.html">OTHERS</a>
+            </div>
+            <div class="flags">
+                <img src="pics/ungarn.png" alt="Magyar" title="Magyar" onclick="changeLanguage('hu')">
+                <img src="pics/osterreich.png" alt="Deutsch" title="Deutsch" onclick="changeLanguage('de')">
+                <img src="pics/uk.png" alt="English" title="English" onclick="changeLanguage('en')">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <!-- First Section -->
+        <div class="section">
+            <img src="pics/project1.png" alt="Project Image 1">
+            <div class="text">
+                <h1>Windows Honeypot IDS</h1>
+                <p>My goal was creating a honeypot system available on Windows, and it needs to act as a real server with open ports. It was exposed on the internet with a fake login site and reported every attempt. If the threat actors use the CEO's email address (who assigned me to this task), it must be sent to the CEO immediately by email and SMS.</p>
+                <p>I have installed a SPLUNK agent connected to our SPLUNK SIEM and wrote rules for various cases. It was a really interesting project; I enjoyed it and learned about honeypots and alerts.</p>
+            </div>
+        </div>
+        <!-- Second Section -->
+        <div class="section">
+            <div class="text">
+                <h1>MITTRE ATT&CK Heatmaps & Gap analysis</h1>
+                <p>I have collected threats in specific sectors and analyzed them to get a comprehensive picture of their effectiveness and popularity. Based on these analyses, I have scored the threat actor groups and merged them into a heatmap. I have used the MITRE ATT&CK framework for this purpose. I received an asset inventory from our client and began determining the coverage of the MITRE ATT&CK heatmap by analyzing the asset features and capabilities. After creating the second heatmap (which represents the coverage of the MITRE ATT&CK framework based on the client's infrastructure), I subtracted the company's heatmap from the sector's heatmap. This provided a picture of the real coverage of the sector based on the MITRE ATT&CK framework.</p>
+            </div>
+            <img src="pics/project2.png" alt="Project Image 2">
+        </div>
+        <!-- Third Section -->
+        <div class="section">
+            <img src="pics/project3.png" alt="Project Image 3">
+            <div class="text">
+                <h1>Security Information and Event Management (SIEM)</h1>
+                <p>I have developed a concept for creating weekly or monthly security incident handling reports for clients. This involves dealing with queries in Splunk SIEM, where agents installed on client computers are connected with the Manager module. The summarized findings are compiled into comprehensive reports.</p>
+                <p>Additionally, I ensure that these reports include actionable insights and recommendations to address any identified vulnerabilities or incidents. Regular reviews of the data help in refining security strategies and improving overall incident response. This proactive approach not only keeps clients informed but also enhances their security posture over time.</p>
+            </div>
+        </div>
+        <!-- Fourth Section -->
+        <div class="section">
+            <div class="text">
+                <h1>Policy writing</h1>
+                <p>I was part of a team responsible for drafting cybersecurity policies for clients, including Logging and Monitoring, IAM (Identity and Access Management), Guest Policy, and Data Encryption Policy. This role provided me with extensive experience in developing comprehensive security guidelines tailored to various organizational needs. I gained valuable insights into best practices for monitoring and logging, managing user access, securing guest interactions, and implementing data encryption. Collaborating with experts in these areas deepened my understanding of effective cybersecurity strategies. This experience significantly enhanced my ability to create robust policies that strengthen clients' security frameworks and mitigate potential risks.</p>
+            </div>
+            <img src="pics/project4.png" alt="Project Image 4">
+        </div>
+        <!-- Fifth Section -->
+        <div class="section">
+            <img src="pics/project5.png" alt="Project Image 5">
+            <div class="text">
+                <h1>NIS 2 Audit Preparation & Security Implementations</h1>
+                <p>In progress..</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
